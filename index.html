@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+        /* Theme color variables used throughout the magical landing page */
         :root {
             --fairy-pink: #ff9ecd;
             --circus-gold: #ffd700;
@@ -23,25 +24,28 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .brand-font {
+        h1, h2, h3, .brand-font { /* font buat heading */
             font-family: 'Cinzel Decorative', cursive;
         }
 
+        /* Gradient text style creates the shimmering magic heading effect */
         .magic-text {
                 background: linear-gradient(45deg, #ff9ecd, #ffd700, #b19cd9, #ff9ecd);
                 background-size: 300% 300%;
                 background-clip: text;
                 -webkit-background-clip: text;
-                color: transparent; /* use this instead */
+                color: transparent;
         }
 
+        /* Shimmer animation for supporting gradient text or backgrounds if needed */
         @keyframes shimmer {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        .float {
+        /* Floating animation for decorative emojis and icons */
+        .float {  /* animasi ngambang */
             animation: float 6s ease-in-out infinite;
         }
 
@@ -50,7 +54,8 @@
             50% { transform: translateY(-20px) rotate(2deg); }
         }
 
-        .sparkle {
+        /* Tiny sparkle particles used in the overlay animation */
+        .sparkle { /* efek sparkle */
             position: absolute;
             width: 4px;
             height: 4px;
@@ -65,7 +70,8 @@
             50% { opacity: 1; transform: scale(1); }
         }
 
-        .card-hover {
+        /* Card hover transform style to lift menu cards on pointer hover */
+        .card-hover { /* efek hover */
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
@@ -89,6 +95,7 @@
             border: 1px solid rgba(255, 215, 0, 0.2);
         }
 
+        /* Button style for magic call-to-action buttons */
         .btn-magic {
             background: linear-gradient(45deg, #ff9ecd, #b19cd9);
             position: relative;
@@ -113,6 +120,7 @@
             100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
         }
 
+        /* Scroll reveal utility class: elements fade and slide up when they enter view */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -165,7 +173,7 @@
     <!-- Floating Sparkles Container -->
     <div id="sparkles" class="fixed inset-0 pointer-events-none z-50"></div>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav class="fixed w-full z-40 bg-black/30 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -244,15 +252,15 @@
                             <div class="space-y-3 mb-6">
                                 <div class="flex justify-between items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-pointer" onclick="addToCart('Classic Cloud Stack', 8)">
                                     <span>Classic Cloud Stack (5pcs)</span>
-                                    <span class="text-yellow-400 font-bold">$8</span>
+                                    <span class="text-yellow-400 font-bold">Rp12,000</span>
                                 </div>
                                 <div class="flex justify-between items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-pointer" onclick="addToCart('Circus Tower (10pcs)', 14)">
                                     <span>Circus Tower (10pcs)</span>
-                                    <span class="text-yellow-400 font-bold">$14</span>
+                                    <span class="text-yellow-400 font-bold">Rp22,000</span>
                                 </div>
                                 <div class="flex justify-between items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-pointer" onclick="addToCart('Fairy Feast (15pcs)', 20)">
                                     <span>Fairy Feast Deluxe (15pcs)</span>
-                                    <span class="text-yellow-400 font-bold">$20</span>
+                                    <span class="text-yellow-400 font-bold">Rp32,000</span>
                                 </div>
                             </div>
                         </div>
@@ -274,19 +282,19 @@
                             <div class="space-y-3 mb-6">
                                 <div class="flex justify-between items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-pointer" onclick="addToCart('Phoenix Fire (Mango)', 6)">
                                     <span>🔥 Phoenix Fire (Mango)</span>
-                                    <span class="text-yellow-400 font-bold">$6</span>
+                                    <span class="text-yellow-400 font-bold">Rp12,000</span>
                                 </div>
                                 <div class="flex justify-between items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-pointer" onclick="addToCart('Mermaid Tears (Blueberry)', 6)">
                                     <span>🧜‍♀️ Mermaid Tears (Blueberry)</span>
-                                    <span class="text-yellow-400 font-bold">$6</span>
+                                    <span class="text-yellow-400 font-bold">Rp12,000</span>
                                 </div>
                                 <div class="flex justify-between items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-pointer" onclick="addToCart('Dragon Blood (Dragonfruit)', 7)">
                                     <span>🐉 Dragon Blood (Dragonfruit)</span>
-                                    <span class="text-yellow-400 font-bold">$7</span>
+                                    <span class="text-yellow-400 font-bold">Rp15,000</span>
                                 </div>
                                 <div class="flex justify-between items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition cursor-pointer" onclick="addToCart('Unicorn Elixir (Mixed)', 8)">
                                     <span>🦄 Unicorn Elixir (Rainbow Mix)</span>
-                                    <span class="text-yellow-400 font-bold">$8</span>
+                                    <span class="text-yellow-400 font-bold">Rp18,000</span>
                                 </div>
                             </div>
                         </div>
@@ -302,20 +310,20 @@
                         <div class="text-4xl mb-3">🤹‍♂️</div>
                         <h4 class="font-bold text-lg mb-2">The Juggler</h4>
                         <p class="text-sm text-gray-400 mb-3">5 Pancakes + 1 Potion</p>
-                        <span class="text-yellow-400 font-bold text-xl">$12</span>
+                        <span class="text-yellow-400 font-bold text-xl">Rp20,000</span>
                     </div>
                     <div class="card-hover menu-item rounded-xl p-6 text-center cursor-pointer border-2 border-yellow-400/50" onclick="addToCart('Ringmaster Feast', 24)">
                         <div class="text-4xl mb-3">🎭</div>
                         <h4 class="font-bold text-lg mb-2 text-yellow-300">Ringmaster's Feast</h4>
                         <p class="text-sm text-gray-400 mb-3">10 Pancakes + 2 Potions</p>
-                        <span class="text-yellow-400 font-bold text-xl">$24</span>
+                        <span class="text-yellow-400 font-bold text-xl">Rp35,000</span>
                         <div class="text-xs text-pink-400 mt-2">Best Value!</div>
                     </div>
                     <div class="card-hover menu-item rounded-xl p-6 text-center cursor-pointer" onclick="addToCart('Fairy Picnic', 18)">
                         <div class="text-4xl mb-3">🧚‍♀️</div>
                         <h4 class="font-bold text-lg mb-2">Fairy Picnic</h4>
                         <p class="text-sm text-gray-400 mb-3">7 Pancakes + 1 Premium Potion</p>
-                        <span class="text-yellow-400 font-bold text-xl">$18</span>
+                        <span class="text-yellow-400 font-bold text-xl">Rp24,000</span>
                     </div>
                 </div>
             </div>
@@ -461,6 +469,14 @@
                 <a href="#" class="text-gray-400 hover:text-pink-400 transition">Facebook</a>
             </div>
             <p class="text-gray-500 text-sm">© 2026 Enchanted Whisk. All magic reserved. ✨</p>
+
+        <!-- Creator Biography Section -->
+        <div class="mt-8 text-center">
+            <h4 class="text-lg font-bold text-white mb-4 magic-text">About the Creator</h4>
+            <img src="zia.jpg" alt="Zia" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-yellow-400 shadow-lg">
+            <p class="text-gray-300 mb-1"><strong>Name:</strong> Zia</p>
+            <p class="text-gray-300 mb-1"><strong>Class:</strong> 10</p>
+            <p class="text-gray-300"><strong>Age:</strong> 15</p>
         </div>
     </footer>
 
@@ -491,10 +507,11 @@
     <!-- Overlay -->
     <div id="overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden" onclick="toggleCart()"></div>
 
-    <script>
+    <script> /* JavaScript for cart functionality, scroll effects, and sparkle animations */
         // Cart functionality
         let cart = [];
 
+        // Add a new item to the cart array and refresh the sidebar display
         function addToCart(item, price) {
             cart.push({ item, price });
             updateCart();
@@ -506,6 +523,7 @@
             setTimeout(() => cartBtn.classList.remove('scale-125'), 200);
         }
 
+        // Update the cart sidebar HTML, count, and total value after any change
         function updateCart() {
             const cartItems = document.getElementById('cart-items');
             const cartCount = document.getElementById('cart-count');
@@ -536,11 +554,13 @@
             cartTotal.textContent = `$${total}`;
         }
 
+        // Remove a cart item by index, then refresh the cart display
         function removeFromCart(index) {
             cart.splice(index, 1);
             updateCart();
         }
 
+        // Show or hide the cart sidebar and overlay when the cart button is toggled
         function toggleCart() {
             const sidebar = document.getElementById('cart-sidebar');
             const overlay = document.getElementById('overlay');
@@ -554,6 +574,7 @@
             }
         }
 
+        // Handle the checkout action, including empty-cart validation and reset
         function checkout() {
             if (cart.length === 0) {
                 showNotification('Your bag is empty!');
@@ -565,6 +586,7 @@
             toggleCart();
         }
 
+        // Create a temporary toast notification message in the top-right corner
         function showNotification(message) {
             const notif = document.createElement('div');
             notif.className = 'fixed top-24 right-4 bg-pink-500 text-white px-6 py-3 rounded-full shadow-lg z-50 transform translate-x-full transition-transform duration-300';
@@ -579,15 +601,18 @@
         }
 
         // Scroll functions
+        // Smooth scroll to the menu section when the hero button is clicked
         function scrollToMenu() {
             document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
         }
 
+        // Smooth scroll to the story section when the story button is clicked
         function showStory() {
             document.getElementById('story').scrollIntoView({ behavior: 'smooth' });
         }
 
         // Sparkle effect
+        // Generate a new sparkle particle at a random position on the screen
         function createSparkle() {
             const sparkle = document.createElement('div');
             sparkle.className = 'sparkle';
@@ -607,6 +632,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
+        // Intersection Observer reveals elements when they scroll into view
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -627,4 +653,4 @@
         });
     </script>
 </body>
-</html>  
+</html>
