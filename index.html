@@ -167,6 +167,7 @@
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
         }
     </style>
+<base target="_blank">
 </head>
 <body class="text-white">
 
@@ -185,6 +186,7 @@
                     <a href="#menu" class="hover:text-pink-300 transition-colors">Our Magic</a>
                     <a href="#story" class="hover:text-pink-300 transition-colors">The Tale</a>
                     <a href="#experience" class="hover:text-pink-300 transition-colors">Experience</a>
+                    <a href="#documentation" class="hover:text-pink-300 transition-colors">Gallery</a>
                     <a href="#visit" class="hover:text-pink-300 transition-colors">Visit Us</a>
                 </div>
                 <button onclick="toggleCart()" class="relative p-2 hover:bg-white/10 rounded-full transition-all">
@@ -330,7 +332,55 @@
         </div>
     </section>
 
-    <!-- Story Section -->
+            <!-- Product Gallery -->
+    <section id="documentation" class="py-20 px-4 bg-black/20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 50% 50%, #ffd700 0%, transparent 60%);"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-12 scroll-reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 magic-text">Product Gallery</h2>
+                <p class="text-gray-400 text-lg">See our magic in real life</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+                <!-- Pancake Photo Slot -->
+                <div class="scroll-reveal group">
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm card-hover">
+                        <div class="aspect-square bg-gray-800 flex items-center justify-center overflow-hidden relative">
+                            <img src="pancakes.jpg" alt="Enchanted Mini Pancakes" 
+                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=\'text-6xl\'>🥞</div><p class=\'text-gray-500 mt-2 text-sm\'>Add pancakes.jpg</p>';">
+                        </div>
+                        <div class="p-4 text-center">
+                            <h3 class="font-bold text-lg text-yellow-300 mb-1">Mini Pancakes</h3>
+                            <p class="text-sm text-gray-400">Our signature cloud-like pancake stacks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Potion Photo Slot -->
+                <div class="scroll-reveal group">
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm card-hover">
+                        <div class="aspect-square bg-gray-800 flex items-center justify-center overflow-hidden relative">
+                            <img src="potion.jpg" alt="Mystical Fruit Potion" 
+                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=\'text-6xl\'>🧪</div><p class=\'text-gray-500 mt-2 text-sm\'>Add potion.jpg</p>';">
+                        </div>
+                        <div class="p-4 text-center">
+                            <h3 class="font-bold text-lg text-purple-300 mb-1">Fruit Potions</h3>
+                            <p class="text-sm text-gray-400">Brewed daily with natural magic</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Story Section -->
     <section id="story" class="py-20 px-4 bg-black/20 relative overflow-hidden">
         <div class="absolute inset-0 opacity-20">
             <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 20% 50%, #ff9ecd 0%, transparent 50%), radial-gradient(circle at 80% 80%, #ffd700 0%, transparent 50%);"></div>
